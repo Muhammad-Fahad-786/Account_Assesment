@@ -1,3 +1,10 @@
+/**
+ * Account Model
+ * 
+ * Defines the schema for bank accounts in the MongoDB database.
+ * Each account has a unique account number, holder name, balance, and KYC verification status.
+ */
+
 const mongoose = require('mongoose');
 
 const accountSchema = new mongoose.Schema({

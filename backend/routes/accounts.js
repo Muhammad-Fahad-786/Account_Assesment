@@ -1,3 +1,12 @@
+/**
+ * Account Routes
+ * 
+ * Handles all API endpoints related to bank account operations:
+ * - Create, read, update account information
+ * - Deposit, withdraw, and transfer money
+ * - Validation and error handling
+ */
+
 const express = require('express');
 const router = express.Router();
 const Account = require('../models/Account');
