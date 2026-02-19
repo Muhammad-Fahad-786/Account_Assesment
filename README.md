@@ -359,10 +359,37 @@ npm run dev
 
 6. Test insufficient balance: Try withdrawing more than available
 
+## Project Status
+
+✅ **Fully Functional** - All core features implemented and tested
+✅ **Deployed** - Frontend on Vercel, Backend on Render
+✅ **Production Ready** - Error handling, validation, and security measures in place
+
+## Future Enhancements
+
+Potential improvements for future versions:
+- User authentication and authorization
+- Transaction history and statements
+- Email notifications
+- Multi-currency support
+- Account closure functionality
+- Admin dashboard
+- API rate limiting
+- Unit and integration tests
+
 ## License
 
 This project is created for technical assessment purposes.
 
+See the [LICENSE](LICENSE) file for details.
+
 ## Author
 
 Created as part of a technical assignment demonstrating full-stack development skills.
+
+## Acknowledgments
+
+- React team for the excellent framework
+- Express.js for the robust backend framework
+- MongoDB for the flexible database solution
+- Vercel and Render for hosting platforms
