@@ -215,34 +215,55 @@ POST /api/accounts/transfer
 
 ## Deployment
 
-### Backend Deployment (Render/Railway)
+### Backend Deployment (Render)
+
+**Backend is already deployed at:** `https://account-assesment-1.onrender.com`
 
 1. Push code to GitHub
-2. Connect repository to Render/Railway
+2. Connect repository to Render
 3. Set environment variables:
-   - `MONGODB_URI`: Your MongoDB connection string
-   - `PORT`: (usually auto-set)
+   - `MONGODB_URI`: Your MongoDB connection string (MongoDB Atlas recommended)
+   - `PORT`: (usually auto-set by Render)
    - `NODE_ENV`: production
 4. Deploy
 
-### Frontend Deployment (Vercel/Netlify)
+**Note:** The backend URL is already configured in the frontend code. If you change the backend URL, update `frontend/src/services/api.js` and set the `VITE_API_URL` environment variable in Vercel.
 
-1. Build the frontend:
-```bash
-cd frontend
-npm run build
-```
+### Frontend Deployment (Vercel)
 
-2. Deploy to Vercel:
+**Option 1: Deploy via Vercel CLI**
+
+1. Install Vercel CLI:
 ```bash
 npm install -g vercel
+```
+
+2. Navigate to project root and deploy:
+```bash
 vercel
 ```
 
-Or connect GitHub repo to Vercel/Netlify and set:
-- Build command: `npm run build`
-- Output directory: `dist`
-- Environment variable: `VITE_API_URL` = your backend URL
+3. Follow the prompts and set:
+   - Root directory: `frontend`
+   - Build command: `npm run build`
+   - Output directory: `dist`
+
+**Option 2: Deploy via Vercel Dashboard (Recommended)**
+
+1. Push your code to GitHub
+2. Go to [Vercel Dashboard](https://vercel.com)
+3. Click "New Project" and import your GitHub repository
+4. Configure the project:
+   - **Framework Preset:** Vite
+   - **Root Directory:** `frontend`
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `dist`
+5. Add Environment Variable:
+   - **Key:** `VITE_API_URL`
+   - **Value:** `https://account-assesment-1.onrender.com/api`
+6. Click "Deploy"
+
+**Note:** The frontend is already configured to use the Render backend URL by default. The environment variable is optional but recommended for flexibility.
 
 ### GitHub Pages (Alternative)
 
